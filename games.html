@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Игры · JODAH</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-field"></div>
+<div class="wrap">
+  <h1 class="page-title">Игры</h1>
+  <p class="page-lead">Три быстрые игры, пока скучно.</p>
+
+  <a class="card cartridge" href="game-2048.html">
+    <div>
+      <h3>2048</h3>
+      <p>Собирай одинаковые числа и дойди до 2048</p>
+      <span class="pb" id="pb-2048"></span>
+    </div>
+    <span class="play-btn">Играть</span>
+  </a>
+
+  <a class="card cartridge" href="game-snake.html">
+    <div>
+      <h3>Змейка</h3>
+      <p>Классика: ешь, расти, не врежься</p>
+      <span class="pb" id="pb-snake"></span>
+    </div>
+    <span class="play-btn">Играть</span>
+  </a>
+
+  <a class="card cartridge" href="game-tictactoe.html">
+    <div>
+      <h3>Крестики-нолики</h3>
+      <p>Один на один против бота</p>
+      <span class="pb" id="pb-ttt"></span>
+    </div>
+    <span class="play-btn">Играть</span>
+  </a>
+
+  <a class="back-link" href="index.html">← назад в профиль</a>
+</div>
+<script>
+  var b2048 = localStorage.getItem('jodah_2048_best');
+  var bSnake = localStorage.getItem('jodah_snake_best');
+  var ttt = JSON.parse(localStorage.getItem('jodah_ttt_stats') || 'null');
+  if(b2048) document.getElementById('pb-2048').textContent = 'лучший счёт: ' + b2048;
+  if(bSnake) document.getElementById('pb-snake').textContent = 'лучший счёт: ' + bSnake;
+  if(ttt) document.getElementById('pb-ttt').textContent = ttt.w + 'W / ' + ttt.l + 'L / ' + ttt.d + 'D';
+</script>
+</body>
+</html>

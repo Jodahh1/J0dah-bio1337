@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Джодах · @J0dah</title>
+<meta name="description" content="Личная страница Джодах — Тюмень, Россия">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-field"></div>
+
+<div class="wrap">
+
+  <div class="card hero">
+    <div class="hero-row">
+      <h1 class="name" data-field="name">Джодах</h1>
+      <span class="chip" data-field="username">@J0dah</span>
+    </div>
+    <p class="meta" data-field="tagline">Тюмень, Россия — 16 лет</p>
+  </div>
+
+  <div class="card facts">
+    <div class="fact"><span class="fact-label">Страна</span><span class="fact-value" data-field="country">Russia</span></div>
+    <div class="fact"><span class="fact-label">Город</span><span class="fact-value" data-field="city">Tyumen</span></div>
+    <div class="fact"><span class="fact-label">Возраст</span><span class="fact-value" data-field="age">16</span></div>
+  </div>
+
+  <a class="cta-pill" href="https://t.me/J0dah" target="_blank" rel="noopener">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 4 3 11l6 2m12-9-4 16-6-6m10-10L9 13"/></svg>
+    <span>@J0dah<small>основной аккаунт</small></span>
+  </a>
+
+  <div class="card panel">
+    <p class="card-label">Мои братья</p>
+    <div class="people">
+      <a class="person" href="https://t.me/vvarrz_9nj" target="_blank" rel="noopener">
+        <span class="avatar">V</span>
+        <span><span class="handle">@vvarrz_9nj</span><br><span class="tag">брат</span></span>
+      </a>
+      <a class="person" href="https://t.me/Oxidonof" target="_blank" rel="noopener">
+        <span class="avatar">O</span>
+        <span><span class="handle">@Oxidonof</span><br><span class="tag">брат</span></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="card quote-card">
+    <p class="quote-mark">&ldquo;</p>
+    <p class="quote-text" data-field="quote">Невозможное — слово из словаря глупцов.</p>
+    <p class="quote-by" data-field="quote_author">— Наполеон</p>
+  </div>
+
+  <div class="card panel">
+    <p class="card-label">Связь</p>
+    <div class="icon-row">
+      <a class="icon-btn" href="https://t.me/personal_life_J0dah" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 4 3 11l6 2m12-9-4 16-6-6m10-10L9 13"/></svg>
+        <span>poke</span>
+      </a>
+      <a class="icon-btn" href="https://steamcommunity.com/profiles/76561199395052600/" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="15" r="1.6"/><path d="M9 15l3.5-4.2M14.5 8.5a2 2 0 1 1 2.6 2.9L14.5 8.5z"/><circle cx="15.3" cy="9.6" r="1.9"/></svg>
+        <span>Steam</span>
+      </a>
+      <a class="icon-btn" href="https://music.yandex.ru/playlists/lk.232a8e9f-e917-4efd-a630-579a45d5b637" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="17" r="2.4"/><circle cx="17" cy="15" r="2.4"/><path d="M10.4 17V6.5L19.4 5v10"/></svg>
+        <span>Музыка</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="foot-nav">
+    <a class="btn primary" href="games.html">Открыть игры</a>
+  </div>
+
+</div>
+
+<!-- hidden admin gate: hold J + D + H together for ~1s -->
+<div class="modal-backdrop" id="adminBackdrop">
+  <div class="card modal">
+    <h3>Вход</h3>
+    <p class="hint">Админ-доступ · Джодах</p>
+    <div class="field">
+      <label for="loginUser">Логин</label>
+      <input id="loginUser" type="text" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="loginPass">Пароль</label>
+      <input id="loginPass" type="password" autocomplete="off">
+    </div>
+    <p class="err" id="loginErr"></p>
+    <div class="modal-actions">
+      <button class="btn ghost" id="loginCancel" type="button">Отмена</button>
+      <button class="btn primary" id="loginSubmit" type="button">Войти</button>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

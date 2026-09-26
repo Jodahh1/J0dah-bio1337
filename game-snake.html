@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Змейка · JODAH</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-field"></div>
+<div class="game-wrap">
+  <div class="game-top">
+    <h1 class="page-title" style="font-size:20px;margin:0;">Змейка</h1>
+    <div style="display:flex;gap:8px;">
+      <span class="score-pill">Счёт: <span id="score">0</span></span>
+      <span class="score-pill">Рекорд: <span id="best">0</span></span>
+    </div>
+  </div>
+
+  <div class="card game-stage">
+    <canvas id="snakeCanvas" width="320" height="320"></canvas>
+  </div>
+
+  <p class="game-msg" id="msg">Стрелки или WASD. Пробел — пауза.</p>
+  <div class="foot-nav">
+    <button class="btn" id="restartBtn" type="button">Заново</button>
+    <a class="btn ghost" href="games.html">К играм</a>
+  </div>
+</div>
+<script src="game-snake.js"></script>
+</body>
+</html>

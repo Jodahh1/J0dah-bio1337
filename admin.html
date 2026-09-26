@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin · JODAH</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-field"></div>
+<div class="wrap">
+
+  <div id="lockedView" class="card admin-locked" style="display:none;">
+    <div class="icon">🔒</div>
+    <h2 style="margin:0 0 6px;font-family:var(--font-display);font-size:20px;">Доступ закрыт</h2>
+    <p style="color:var(--text-dim);font-size:13.5px;margin:0 0 20px;">Сюда попадают только через секретную комбинацию на главной странице.</p>
+    <a class="btn primary" href="index.html">На главную</a>
+  </div>
+
+  <div id="dashboard" style="display:none;">
+    <h1 class="page-title">Панель</h1>
+    <p class="page-lead">Только для Джодах.</p>
+
+    <div class="card stat-grid">
+      <div class="stat"><div class="num" id="visitCount">0</div><div class="lbl">визитов</div></div>
+      <div class="stat"><div class="num" id="best2048">0</div><div class="lbl">рекорд 2048</div></div>
+      <div class="stat"><div class="num" id="bestSnake">0</div><div class="lbl">рекорд змейки</div></div>
+    </div>
+
+    <div class="card panel">
+      <h2>Изменить bio</h2>
+      <div class="field"><label for="f_name">Имя</label><input id="f_name"></div>
+      <div class="field"><label for="f_country">Страна</label><input id="f_country"></div>
+      <div class="field"><label for="f_city">Город</label><input id="f_city"></div>
+      <div class="field"><label for="f_age">Возраст</label><input id="f_age"></div>
+      <div class="field"><label for="f_username">Юзернейм</label><input id="f_username"></div>
+      <div class="field"><label for="f_tagline">Подзаголовок</label><input id="f_tagline"></div>
+      <div class="field"><label for="f_quote">Цитата</label><textarea id="f_quote" rows="2"></textarea></div>
+      <div class="field"><label for="f_quote_author">Автор цитаты</label><input id="f_quote_author"></div>
+      <div class="modal-actions">
+        <button class="btn ghost" id="resetBtn" type="button">Сбросить</button>
+        <button class="btn primary" id="saveBtn" type="button">Сохранить</button>
+      </div>
+      <p class="save-msg" id="saveMsg"></p>
+      <p style="color:var(--text-dim);font-size:12px;margin-top:6px;">Изменения хранятся в этом браузере (localStorage) и применяются на главной странице сайта.</p>
+    </div>
+
+    <div class="foot-nav">
+      <a class="btn ghost" href="index.html">На главную</a>
+      <button class="btn" id="logoutBtn" type="button">Выйти</button>
+    </div>
+  </div>
+
+</div>
+<script src="admin.js"></script>
+</body>
+</html>
